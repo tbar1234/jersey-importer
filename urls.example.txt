@@ -1,0 +1,14 @@
+# urls.example.txt
+# ─────────────────────────────────────────────────────────────────────────
+# One Yupoo album URL per line. Lines starting with # are ignored.
+# Copy this file to urls.txt (or any name) and run:
+#
+#   node importer/run.js --file urls.txt
+#
+# Find album URLs by browsing the catalog at:
+#   https://168dyfs.x.yupoo.com/albums
+# and copying the link of each jersey album you want to import
+# (URLs that look like https://168dyfs.x.yupoo.com/albums/<id>?uid=1)
+# ─────────────────────────────────────────────────────────────────────────
+
+https://168dyfs.x.yupoo.com/albums/241571681?uid=1

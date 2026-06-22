@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Pitch Perfect Kits</title>
+<meta name="description" content="Premium soccer jersey catalog — browse club and national team kits by region, type, and season."/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <div class="logo-ball">⚽</div>
+    <div>
+      <span class="logo-name">Pitch Perfect Kits</span>
+      <span class="logo-sub">Premium Soccer Jerseys</span>
+    </div>
+  </div>
+  <span class="header-count" id="headerCount"></span>
+</header>
+
+<section class="hero">
+  <p class="eyebrow">⚽ &nbsp; World-Class Kits &nbsp; ⚽</p>
+  <h1>Pitch<span>Perfect Kits</span></h1>
+  <p class="hero-desc">Authentic replica jerseys from elite clubs &amp; national teams worldwide</p>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search team, country, season, type…" autocomplete="off"/>
+  </div>
+</section>
+
+<section class="controls">
+  <div class="filter-group">
+    <div class="filter-label">Category</div>
+    <div class="pills" id="categoryFilters" data-filter="category">
+      <button class="pill active" data-value="all">All</button>
+      <button class="pill" data-value="club">Clubs</button>
+      <button class="pill" data-value="national">National Teams</button>
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <div class="filter-label">Kit Type</div>
+    <div class="pills" id="typeFilters" data-filter="type">
+      <button class="pill active" data-value="all">All Types</button>
+      <button class="pill" data-value="home">Home</button>
+      <button class="pill" data-value="away">Away</button>
+      <button class="pill" data-value="third">Third</button>
+      <button class="pill" data-value="player">Player Version</button>
+      <button class="pill" data-value="training">Training</button>
+      <button class="pill" data-value="special">Special Edition</button>
+      <button class="pill" data-value="gk">Goalkeeper</button>
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <div class="filter-label">Region</div>
+    <div class="pills" id="regionFilters" data-filter="region">
+      <button class="pill active" data-value="all">All Regions</button>
+      <button class="pill" data-value="europe">Europe</button>
+      <button class="pill" data-value="southamerica">South America</button>
+      <button class="pill" data-value="africa">Africa</button>
+      <button class="pill" data-value="asia">Asia / Middle East</button>
+      <button class="pill" data-value="northamerica">North / C. America</button>
+      <button class="pill" data-value="oceania">Oceania</button>
+    </div>
+  </div>
+
+  <div class="sort-row">
+    <label class="filter-label" for="sortSelect" style="margin-bottom:0">Sort:</label>
+    <select class="sort-select" id="sortSelect">
+      <option value="default">Default</option>
+      <option value="az">A → Z</option>
+      <option value="za">Z → A</option>
+      <option value="season">Season (Newest)</option>
+    </select>
+    <span class="result-count" id="resultCount"></span>
+  </div>
+</section>
+
+<main class="grid" id="grid" aria-live="polite">
+  <!-- Cards injected by app.js -->
+</main>
+
+<footer class="site-footer">
+  <span>© 2025 Pitch Perfect Kits</span>
+  <span>All images hosted locally</span>
+</footer>
+
+<!-- ───────────────────────── GALLERY MODAL ───────────────────────── -->
+<div class="overlay" id="overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-sub" id="modalSub"></div>
+      </div>
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-main" id="modalMain">
+        <button class="nav prev" id="navPrev" aria-label="Previous image">&#8249;</button>
+        <img id="modalImg" alt="" loading="eager"/>
+        <button class="nav next" id="navNext" aria-label="Next image">&#8250;</button>
+      </div>
+      <div class="modal-thumbs" id="modalThumbs"></div>
+    </div>
+    <div class="modal-footer">
+      <span class="modal-counter" id="modalCounter"></span>
+      <div class="modal-tags-row" id="modalTags"></div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
